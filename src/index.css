@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* custom shimmer utility */
+
+@theme {
+  --animate-shimmer: shimmer 1.5s infinite;
+}
+
+/* keyframes */
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* reusable shimmer class */
+
+.shimmer-box {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #d1d5db;
+}
+
+.shimmer-box::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  transform: translateX(-100%);
+
+  animation: var(--animate-shimmer);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+}
