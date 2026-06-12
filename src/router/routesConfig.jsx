@@ -1,12 +1,15 @@
 
 import { lazy } from 'react';
 
-const Products = lazy(() => import("../components/Products/Products"));
+
 import About from '../components/About';
 import { createBrowserRouter } from 'react-router-dom';
 import Memes from '../components/Shimmer/Memes';
 import Accordion from '../components/Accordion/Accordion';
 import Comments from '../components/Comments/Comments';
+import ImageSlider from '../components/ImageSlider/ImageSlider';
+import ProductsItem from '../components/Pagination/ProductsItem';
+// eslint-disable-next-line react-refresh/only-export-components
 const Home = lazy(() => import("../components/Home"))
 
 export const routesConfig =  createBrowserRouter([
@@ -29,6 +32,14 @@ export const routesConfig =  createBrowserRouter([
       {
         path: '/comments',
         element: <Comments/>
+      },
+      {
+        path: '/imageSlider',
+        element: <ImageSlider/>
+      },
+       {
+        path: '/products',
+        element: <ProductsItem/>
       }  
     ]
   },
