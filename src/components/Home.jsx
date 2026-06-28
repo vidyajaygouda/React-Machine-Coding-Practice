@@ -31,8 +31,8 @@ function Home() {
       <button onClick={handleChangeTheme}>CHange Theme</button>
       <InputFocus/>
       <TransitionHook/> */}
-      <SearchPage/>
-      {/* <Header/> */}
+      {/* <SearchPage/> */}
+      <Header/>
       <Outlet/>
     </div>
   )
