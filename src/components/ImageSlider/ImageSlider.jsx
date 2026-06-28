@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import ReducerComponent from '../Hooks/Usereducer';
+import EventEffect from '../Hooks/UseEffectEvent';
+import Timer from '../Hooks/UseEffectEvent';
+import ProductPages from '../Hooks/UseCallback';
+import ProductList from '../Hooks/UseMemo';
 
 function ImageSlider() {
     const images = [
@@ -31,12 +36,21 @@ function ImageSlider() {
         setImageIndex(imageIndex => (imageIndex -1) < 0 ? images.length - 1 : imageIndex - 1)
     }
 
+
+
   return (
-        <div className='flex justify-center items-center mt-10 relative'>
+    <>
+        {/* <div className='flex justify-center items-center mt-10 relative'>
             <button className='cursor-pointer' onClick={handleBack}>Back</button>
                 <img src={images[imageIndex]} alt='slider-img' className='w-100 h-100 object-cover'/>
             <button className=' cursor-pointer' onClick={handleForward}>Forward</button>
-        </div>
+        </div> */}
+         {/* <ReducerComponent/> */}
+         {/* <EventEffect roomId = {1234}/> */}
+         {/* <Timer/> */}
+         {/* <ProductPages/> */}
+         
+    </>
   )
 }
 
