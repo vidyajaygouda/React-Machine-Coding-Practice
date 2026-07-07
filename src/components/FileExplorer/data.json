@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "name": "src",
+        "folder": true,
+        "childern": [
+            {
+                "id": 1,
+                "name": "package.json",
+                "folder": false
+            },
+            {
+                "id": 2,
+                "name": "App.js",
+                "folder": false
+            },
+            {
+                "id": 3,
+                "name": "components",
+                "folder": true,
+                 "childern": [
+                        {
+                            "id": 1,
+                            "name": "Header.jsx",
+                            "folder": true,
+                            "childern": [
+                        {
+                            "id": 1,
+                            "name": "Menu.jsx",
+                            "folder": false
+                        },
+                        {
+                            "id": 2,
+                            "name": "Login.jsx",
+                            "folder": false
+                        },
+                        {
+                            "id": 3,
+                            "name": "Signup.jsx",
+                            "folder": false
+                        }
+            
+                        ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Home.jsx",
+                            "folder": false
+                        },
+                        {
+                            "id": 3,
+                            "name": "Nav.jsx",
+                            "folder": false
+                        }
+            
+                    ]
+            }
+            
+        ]
+    },
+    {
+        "id": 2,
+        "name": "index.html",
+        "folder": false
+    },
+    {
+        "id": 3,
+        "name": "main.jsx",
+        "folder": false
+    },
+    {
+        "id": 4,
+        "name": "main.jsx",
+        "folder": true,
+        "childern": [
+            {
+                "id": 1,
+                "name": "package.json",
+                "folder": false
+            },
+            {
+                "id": 2,
+                "name": "App.js",
+                "folder": false
+            },
+            {
+                "id": 3,
+                "name": "components",
+                "folder": true,
+                "childern" : [
+                    {
+                        "id": 3,
+                        "name": "components",
+                        "folder": true
+                    }
+                ]
+            }
+            
+        ]
+    },
+    {
+        "id": 5,
+        "name": "App.css",
+        "folder": false
+    }
+]

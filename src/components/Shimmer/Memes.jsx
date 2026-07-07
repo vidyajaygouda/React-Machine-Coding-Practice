@@ -21,8 +21,7 @@ function Memes() {
     // window.innerhiegth :- height of the window which is visible 
     // window.scrolly :- how much i scrolled to an vertically 
     // document.documentElement.scrollheight :- the complete  height of web page
-      const height =   window.scrollY + window.innerHeight >= document.documentElement.scrollHeight;
-      if(height) {
+      if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
         fetchMemes();
       }
 
@@ -40,13 +39,12 @@ function Memes() {
 
  
 
-  if(loading) {
-    return <Shimmer />
-  }
+
 
   return (
-    <div className="flex flex-wrap mt-5 mx-2 my-2 gap-2">
+    <div className="flex flex-wrap mt-5 mx-2 my-2 gap-2 mb-2">
        { memes.map((item) => <Meme data = {item}/>)}
+       {loading && <Shimmer/>}
     </div>
   )
 }

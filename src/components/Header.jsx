@@ -25,6 +25,8 @@ const Header = () => {
                     <Link className="px-1" to={"/imageSlider"}>Image Slider</Link>
                     <Link className="px-1" to={"/products"}>Products</Link>
                     <Link className="px-1" to={"/search"} >Search</Link>
+                    <Link className="px-1" to={"/stopWatch"} >StopWatch</Link>
+                    <Link className="px-1" to={"/fileExplorer"} >File Explorer</Link>
                </NavLink>  
                <select value={lang} onChange={(e) => dispatch(setLang(e.target.value))}>
                     <option value={"en"}>English</option>

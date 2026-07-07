@@ -21,17 +21,13 @@ function Accordion() {
     const [accordionOpenIndex , setAccordionOpenIndex] = useState([]);
 
     const toggleAccordion = (index) => {
-        if(true) {
-            if (accordionOpenIndex.includes(index)) {
-                // If already open, filter it out to close it when we are trying to close 
-                setAccordionOpenIndex(accordionOpenIndex.filter((i) => i !== index));
-                } else {
-                // If closed, add it to the array to open it alongside others
-                setAccordionOpenIndex([...accordionOpenIndex, index]);
-                }
-        }else{
-            setAccordionOpenIndex(accordionOpenIndex.includes(index) ? [] : [index])
-        }
+        
+            if(accordionOpenIndex.includes(index)){
+                setAccordionOpenIndex(accordionOpenIndex.filter(id => id !== index))
+            }else{
+                setAccordionOpenIndex([...accordionOpenIndex, index])
+            }
+        
     
   };
 
@@ -43,7 +39,9 @@ function Accordion() {
                 title = {item.title} 
                 content = {item.content}
                 isOpen = {accordionOpenIndex.includes(index)}
-                setIsOpen = {() => toggleAccordion(index)}
+                setIsOpen={() => toggleAccordion(index)}
+              // isOpen={index === accordionOpenIndex ? true : false}
+               // setIsOpen = {() => index === accordionOpenIndex ? setAccordionOpenIndex(null) : setAccordionOpenIndex(index)}
             />
         ))}
     </div>

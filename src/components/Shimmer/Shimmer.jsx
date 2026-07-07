@@ -2,7 +2,8 @@ import React from 'react'
 
 function Shimmer() {
   return (
-    <div className='w-60 h-60 bg-gray-100 ml-2'>
+    <>
+      {Array.from({length: 20} ,() => <div className='w-60 h-60 bg-gray-100 ml-2'>
         <div
         className="
           w-[320px]
@@ -118,7 +119,8 @@ function Shimmer() {
           />
         </div>
       </div>
-    </div>
+    </div>)}
+    </>
   )
 }
 

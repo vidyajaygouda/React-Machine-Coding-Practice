@@ -10,6 +10,8 @@ import Comments from '../components/Comments/Comments';
 import ImageSlider from '../components/ImageSlider/ImageSlider';
 import ProductsItem from '../components/Pagination/ProductsItem';
 import AutoSearch from '../components/AutoSearch/AutoSearch';
+import StopWatch from '../components/StopWatch/stopWatch';
+import FileExplorer from '../components/FileExplorer/File';
 // eslint-disable-next-line react-refresh/only-export-components
 const Home = lazy(() => import("../components/Home"))
 
@@ -45,7 +47,15 @@ export const routesConfig =  createBrowserRouter([
       {
         path: '/search',
         element: <AutoSearch/>
-      }   
+      },
+      {
+        path: '/stopWatch',
+        element: <StopWatch/>
+      },
+      {
+        path: '/fileExplorer',
+        element: <FileExplorer/>
+      }     
     ]
   },
  
