@@ -19,11 +19,11 @@ function AutoSearch() {
         return;
       }else{
         // if cache does't have a data API call and update the data 
-              const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+              const res = await fetch(`https://dummyjson.com/products/search?q=${searchText}`);
               const data = res.json();
 
-             cache.current.searchText = data;
-              setSearchResults(data);
+             cache.current = data;
+              setSearchResults(data?.products);
       }
 
      

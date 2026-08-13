@@ -60,7 +60,7 @@ function StopWatch() {
         <div className='flex justify-center text-center mx-auto gap-2 mt-2'>
             <button className='bg-gray-200 p-2 text-black cursor-pointer' onClick={handleStart}>Start</button>
             <button className='bg-gray-200 p-2 text-black cursor-pointer' onClick={handlePause}>Pause</button>
-            <button className='bg-gray-200 p-2 text-black cursor-pointer' onClick={handleStop}>Stop</button>
+            <button className='bg-gray-200 p-2 text-black cursor-pointer' onClick={handleStop}>Reset</button>
         </div>
     </div>
   )

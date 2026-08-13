@@ -12,6 +12,7 @@ import ProductsItem from '../components/Pagination/ProductsItem';
 import AutoSearch from '../components/AutoSearch/AutoSearch';
 import StopWatch from '../components/StopWatch/stopWatch';
 import FileExplorer from '../components/FileExplorer/File';
+import Progressbar from '../components/Progressbar/progressbar';
 // eslint-disable-next-line react-refresh/only-export-components
 const Home = lazy(() => import("../components/Home"))
 
@@ -55,6 +56,10 @@ export const routesConfig =  createBrowserRouter([
       {
         path: '/fileExplorer',
         element: <FileExplorer/>
+      },
+      {
+        path: '/progressbar',
+        element: <Progressbar/>
       }     
     ]
   },

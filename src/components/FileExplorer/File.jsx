@@ -48,7 +48,28 @@ const FileExplorer = () => {
                 return node;
             })
         }
-        
+          const updateNode = (list) => {
+      return list.map((node) => {
+        if (node.id === parentId) {
+          return {
+            ...node,
+            children: [
+              ...node.children,
+              {
+                id: 1,
+                name: "xyz",
+                isFolder: true,
+                children: [],
+              },
+            ],
+          };
+        }
+        if (node.children) {
+          return { ...node, children: updateNode[node.children] };
+        }
+        return node
+      });
+    };
         setData((prev) => updateNode(prev))
     }
     const handleDeleteNodeList = (deleteId) => {
